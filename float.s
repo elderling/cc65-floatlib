@@ -12,14 +12,14 @@ BINARYFORMAT = BINARYFORMAT_CBM_PACKED
 ;---------------------------------------------------------------------------------------------
 
 __basicon:
-        sei
-        ldx #$37
-        stx $01
+;       sei
+;       ldx #$37
+;       stx $01
         rts
 __basicoff:
-        ldx #$36
-        stx $01
-        cli
+;       ldx #$36
+;       stx $01
+;       cli
         rts
 
 ;---------------------------------------------------------------------------------------------
@@ -491,8 +491,8 @@ __float_ret2:
 
         ;jsr __basicoff
         ldx #$36
-        stx $01
-        cli
+        ;stx $01
+        ;cli
         jmp ___float_fac_to_float    ; also pops pointer to float
 
 .macro __ffunc2a addr
@@ -527,9 +527,9 @@ __for:    __ffunc2b BASIC_ARG_FAC_Or
         
 __float_ret3:
         ;jsr __basicoff
-        ldx #$36
-        stx $01
-        cli
+        ;ldx #$36
+        ;stx $01
+        ;cli
         ldx #0
         rts  
         
