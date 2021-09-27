@@ -46,7 +46,9 @@ __basicoff:
 ;---------------------------------------------------------------------------------------------
 
 .if .defined(__VIC20__)
-        .include  "float.inc"
+        .include "float-vic20.inc"
+.else
+        .include "float.inc"
 .endif
         
         .importzp sreg, ptr1
