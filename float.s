@@ -549,9 +549,11 @@ __for:    __ffunc2b BASIC_ARG_FAC_Or
         
 __float_ret3:
         ;jsr __basicoff
-        ;ldx #$36
-        ;stx $01
-        ;cli
+.if .defined(__C64__)
+        ldx #$36
+        stx $01
+        cli
+.endif
         ldx #0
         rts  
         
