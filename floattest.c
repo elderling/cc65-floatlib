@@ -48,17 +48,11 @@ void csetpoint8(unsigned char x)
     printf("*\n");
 }
 
-//#define YNUM    32
-//#define YNUM2   16
+#define YNUM    32
+#define YNUM2   16
 
-//#define XNUM    32
-//#define XNUM2   16
-
-#define YNUM    16
-#define YNUM2   8
-
-#define XNUM    16
-#define XNUM2   8
+#define XNUM    32
+#define XNUM2   16
 
 void calcsin(void)
 {
@@ -317,8 +311,7 @@ void testcompare(void)
 
 void testprinting(void)
 {
-    printf("At least this works!\n");
-    a = itof((int)1);
+    a = itof(1);
     b = fdiv(a,itof(10)); printf("0x%08lx %s %s\n", ftobin(b), _ftostr(strbuf, b), ftoa(strbuf2, b));
     b = fdiv(a,itof(100)); printf("0x%08lx %s %s\n", ftobin(b), _ftostr(strbuf, b), ftoa(strbuf2, b));
     b = fdiv(a,itof(1000)); printf("0x%08lx %s %s\n", ftobin(b), _ftostr(strbuf, b), ftoa(strbuf2, b));
